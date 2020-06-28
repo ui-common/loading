@@ -1,0 +1,26 @@
+{
+  "name": "ui-loading",
+  "version": "0.0.3",
+  "description": "Loading",
+  "main": "./lib/loading.js",
+  "types": "./src/loading.ts",
+  "scripts": {
+    "build:lib": "tsc",
+    "clean:lib": "rimraf lib"
+  },
+  "devDependencies": {
+    "tslint": "5.10.0",
+    "typescript": "^3.3.3333"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com/ui-common/loading"
+  },
+  "keywords": [
+    "loading",
+    "ui-loading"
+  ]
+}
