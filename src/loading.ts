@@ -1,34 +1,36 @@
-export class LoadingUtil {
-  private static sysLoading = null;
-  static showLoading = (isFirstTime?: boolean) => {
-    try {
-      if (!LoadingUtil.sysLoading) {
-        LoadingUtil.sysLoading = (window as any).sysLoading;
-      }
-      if (LoadingUtil.sysLoading) {
-        LoadingUtil.sysLoading.style.display = 'block';
-        if (isFirstTime) {
-          LoadingUtil.sysLoading.classList.add('dark');
-        } else {
-          LoadingUtil.sysLoading.classList.remove('dark');
-        }
-      }
-    } catch (er) {
-      console.log(er);
-    }
-  }
+// tslint:disable-next-line:class-name
+export class resource {
+  static loading = null;
+}
 
-  static hideLoading = () => {
-    try {
-      if (!LoadingUtil.sysLoading) {
-        LoadingUtil.sysLoading = (window as any).sysLoading;
-      }
-      if (LoadingUtil.sysLoading) {
-        LoadingUtil.sysLoading.style.display = 'none';
-      }
-    } catch (er) {
-      console.log(er);
+export function showLoading(isFirstTime?: boolean) {
+  try {
+    if (!resource.loading) {
+      resource.loading = (window as any).sysLoading;
     }
+    if (resource.loading) {
+      resource.loading.style.display = 'block';
+      if (isFirstTime) {
+        resource.loading.classList.add('dark');
+      } else {
+        resource.loading.classList.remove('dark');
+      }
+    }
+  } catch (er) {
+    console.log(er);
+  }
+}
+
+export function hideLoading() {
+  try {
+    if (!resource.loading) {
+      resource.loading = (window as any).sysLoading;
+    }
+    if (resource.loading) {
+      resource.loading.style.display = 'none';
+    }
+  } catch (er) {
+    console.log(er);
   }
 }
 
@@ -39,10 +41,10 @@ export interface LoadingService {
 
 class DefaultLoadingService {
   showLoading(firstTime?: boolean): void {
-    LoadingUtil.showLoading(firstTime);
+    showLoading(firstTime);
   }
   hideLoading(): void {
-    LoadingUtil.hideLoading();
+    hideLoading();
   }
 }
 
