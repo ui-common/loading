@@ -1,6 +1,6 @@
 {
   "name": "ui-loading",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Loading",
   "main": "./lib/loading.js",
   "types": "./src/loading.ts",
@@ -17,7 +17,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com/ui-common/loading"
+    "url": "git@github.com/ui-common/ui-loading"
   },
   "keywords": [
     "loading",

@@ -1,6 +1,6 @@
 // tslint:disable-next-line:class-name
 export class resource {
-  static loading = null;
+  static loading: HTMLElement;
 }
 
 export function showLoading(isFirstTime?: boolean) {
