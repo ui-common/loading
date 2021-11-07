@@ -3,7 +3,7 @@ export class resource {
   static loading: HTMLElement;
 }
 
-export function showLoading(isFirstTime?: boolean) {
+export function showLoading(isFirstTime?: boolean): void {
   try {
     if (!resource.loading) {
       resource.loading = (window as any).sysLoading;
@@ -21,7 +21,7 @@ export function showLoading(isFirstTime?: boolean) {
   }
 }
 
-export function hideLoading() {
+export function hideLoading(): void {
   try {
     if (!resource.loading) {
       resource.loading = (window as any).sysLoading;
